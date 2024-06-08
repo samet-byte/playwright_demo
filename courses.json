@@ -1,0 +1,44 @@
+[
+    {
+        "name": "EEE/EEM226-01-2023-2024-Bahar-Elektromanyetik I",
+        "code": "EEE/EEM226",
+        "link": "https://oys2.baskent.edu.tr/course/view.php?id=1663",
+        "id": 1663
+    },
+    {
+        "name": "EEE/EEM312-01-2023-2024-BAHAR-Say\u0131sal Elektronik",
+        "code": "EEE/EEM312",
+        "link": "https://oys2.baskent.edu.tr/course/view.php?id=424",
+        "id": 424
+    },
+    {
+        "name": "EEE/EEM450-01/02-2023-2024-Bahar-Elektrik Makineleri",
+        "code": "EEE/EEM450",
+        "link": "https://oys2.baskent.edu.tr/course/view.php?id=733",
+        "id": 733
+    },
+    {
+        "name": "EEM/EEE 322-01/02-2023-2024-Spring-Control Systems",
+        "code": "EEM/EEE 322",
+        "link": "https://oys2.baskent.edu.tr/course/view.php?id=927",
+        "id": 927
+    },
+    {
+        "name": "EEM310/EEE310-01-2023-2024-BAHAR-S\u0130NYALLER S\u0130STEMLER II",
+        "code": "EEM310/EEE310",
+        "link": "https://oys2.baskent.edu.tr/course/view.php?id=881",
+        "id": 881
+    },
+    {
+        "name": "EEM410-01-2023-2024-Bahar-T\u00fcmle\u015fik Devre Tasar\u0131m\u0131",
+        "code": "EEM410",
+        "link": "https://oys2.baskent.edu.tr/course/view.php?id=1092",
+        "id": 1092
+    },
+    {
+        "name": "EEM451-01-2023-2024-Bahar-Elektrik \u00dcretim Tesisleri",
+        "code": "EEM451",
+        "link": "https://oys2.baskent.edu.tr/course/view.php?id=1079",
+        "id": 1079
+    }
+]

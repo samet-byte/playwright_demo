@@ -5,6 +5,8 @@ from finder import *
 import json
 from urllib import request
 import os
+from tqdm import tqdm
+import datetime
 
 
 # sleep time
@@ -52,15 +54,17 @@ def run(playwright: Playwright):
         resources = json.loads(find_resources(page.content()))
         sleep(1)
         
+        
+        allowed_types = ["pdf", "docx", "doc", "pptx", "ppt", "txt", "xls", "xlsx"]
         for resource in resources:
-            if resource["type"] == "pdf":
+            if resource["type"] in allowed_types:
                 print("Downloading ", resource["title"])
                 # download the resource link to the folder with the course name
                 pdf_link = resource["link"]
-                pdf_title = resource["title"] + ".pdf"
+                pdf_title = resource["title"] + f".{resource['type']}"
                 
                 # create a folder with the course name if it does not exist
-                course_folder = os.path.join(course["code"])
+                course_folder = os.path.join(f"resources/{course['name']}")
                 if not os.path.exists(course_folder):
                     os.makedirs(course_folder)
                 
@@ -73,11 +77,11 @@ def run(playwright: Playwright):
                     continue
                 
                 try:
-                    request.urlretrieve(pdf_link, pdf_path)
+                    with tqdm(total=1, desc=f"Downloading {resource['title']}") as pbar:
+                        request.urlretrieve(pdf_link, pdf_path, reporthook=lambda count, blockSize, totalSize: pbar.update(blockSize))
                     print(f"Downloaded {pdf_title} to {pdf_path}")
                 except Exception as e:
-                    print(f"Failed to download {pdf_title}. Error: {e}")    
-                    continue
+                    print(f"Failed to download {pdf_title}. Error: {e}")
                 # input("Press Enter to continue...")
                     
                 
